@@ -87,13 +87,54 @@ def transform_line_word_char_counts(*, lines: list[str]) -> dict[str, int]:
 
 
 def transform_frequent_words(*, lines: list[str], top_n: int = 10) -> dict[str, int]:
-    """T: Find the most frequently used words."""
+    """T: Find the most frequently used meaningful words, excluding common stop words."""
+    stop_words = {
+        "a",
+        "an",
+        "and",
+        "are",
+        "as",
+        "at",
+        "be",
+        "but",
+        "by",
+        "for",
+        "from",
+        "he",
+        "her",
+        "him",
+        "his",
+        "i",
+        "in",
+        "is",
+        "it",
+        "me",
+        "my",
+        "not",
+        "of",
+        "on",
+        "or",
+        "she",
+        "that",
+        "the",
+        "their",
+        "them",
+        "they",
+        "this",
+        "to",
+        "was",
+        "we",
+        "were",
+        "with",
+        "you",
+        "your",
+    }
     word_counts: dict[str, int] = {}
 
     for line in lines:
         for word in line.lower().split():
             clean_word = "".join(character for character in word if character.isalpha())
-            if clean_word:
+            if clean_word and clean_word not in stop_words:
                 word_counts[clean_word] = word_counts.get(clean_word, 0) + 1
 
     sorted_words = sorted(
@@ -153,7 +194,7 @@ def load_summary_report(
         f.write(f"Lines: {summary['lines']}\n")
         f.write(f"Words: {summary['words']}\n")
         f.write(f"Characters: {summary['chars']}\n")
-        f.write("\n10 Most Frequently Used Words\n")
+        f.write("\n10 Most Frequently Used Meaningful Words\n")
         for key, value in summary.items():
             if key.startswith("word_"):
                 word = key.removeprefix("word_")

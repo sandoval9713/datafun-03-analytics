@@ -61,3 +61,23 @@ Each pipeline follows the
   The most frequent words were **and** (718), **the** (681), **I** (580),
   **to** (522), **a** (466), **of** (392), **my** (358), **is** (345),
   **that** (344), and **in** (322).
+
+  ## Final Application: Meaningful Word Frequency
+
+  For my final application, I extended the TXT pipeline to remove common stop words and identify the most frequently used meaningful words in *Romeo and Juliet*.
+
+  The 10 most frequently used meaningfulwords were:
+
+  - **romeo**: 294
+  - **thou**: 276
+  - **juliet**: 177
+  - **thy**: 167
+  - **thy**: 164
+  - **what**: 164
+  - **o**: 156
+  - **will**: 147
+  - **so**: 145
+  - **nurse**: 143
+  - **thee**: 139
+
+  Removing common woords makes the repeated subjects, characters, and ideas in the text easier to identify.

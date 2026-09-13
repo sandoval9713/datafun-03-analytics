@@ -13,7 +13,7 @@
 
 [project]
 name = "datafun-03-analytics" # CUSTOM: Package distribution name (use lowercase and dashes).
-description = "Python analytics project using ETVL pipelines to pocess multiple data formats."
+description = "Python data analytics project using ETVL pipelines snd meaningful word-frequency analysis."
 authors = [{ name = "Delfina Sandoval"}]
 readme = "README.md"
 requires-python = ">=3.14"

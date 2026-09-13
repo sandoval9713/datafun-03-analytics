@@ -9,7 +9,7 @@
 
 ## About Me
 My name is Delfina Sandoval, and this repositpry contains my work for the datafun-03-analytics project.
-> Professional Python project: working with data files for analytics.
+- **Project focus:** Using ETVL pipelines to analyze CSV, JSON, XLSX, and TXT data, including a custom meaningful word-frequency analysis of *Romeo and Juliet*.
 
 ## Our Approach: Learn by Doing
 

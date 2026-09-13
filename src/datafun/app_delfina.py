@@ -141,16 +141,16 @@ so counting the word estimates how often that came up.
 # === TEXT: SUMMARIZE A DOCUMENT ===
 
 TXT_PIPELINE_DESCRIPTION: Final[str] = r"""
-Read the Romeo and Juliet text file, count its lines, words, and characters, find the 10 most frequently used words,
+Read the Romeo and Juliet text file, count its lines, words, and characters, find the 10 most frequently used meaningful words,
+after removing common stop words,
 verify the results,
 and write the results to a text file.
 """
 
 TXT_INPUT: Final[Path] = RAW_DIR / "romeo_and_juliet_Delfina.txt"
-TXT_OUTPUT: Final[Path] = PROCESSED_DIR / "txt_word_frequency_delfina.txt"
+TXT_OUTPUT: Final[Path] = PROCESSED_DIR / "txt_meaningful__word_frequency_delfina.txt"
 WHY_TXT_SUMMARY: Final[str] = r"""
-Word-frequency counts show which words appear most often in the text.
-This gives more information than only counting lines, words, and characters.
+Removing common stop words makes the repeated subjects and ideas in Romeo and Juliet easier to identify.
 """
 
 # === DEFINE THE MAIN FUNCTION ===
