@@ -55,6 +55,9 @@ Each pipeline follows the
 
 - **TXT** - reads the Romeo and Juliet text file,
   counts its lines, words, and characters,
+  finds the 10 most frequently used words,
   verifies the results,
-  and writes the summary to a text file.
-  (TODO: link or disply results).
+  and writes the results to a text file.
+  The most frequent words were **and** (718), **the** (681), **I** (580),
+  **to** (522), **a** (466), **of** (392), **my** (358), **is** (345),
+  **that** (344), and **in** (322).
